@@ -1,3 +1,186 @@
+// Variables
+
+$af: sans-serif, Arial // Alternative Font
+$mt: .2s // Main Transition
+
+/*=== RESET ===*/
+
 *
   padding: 0
   margin: 0
+
+a
+  text-decoration: none
+
+ul
+  list-style-type: none
+
+/*=== MAIN SETTINGS ===*/
+
+body
+  min-width: 1024px
+  background-color: #eee
+
+.container
+  width: 1024px
+  margin: 0 auto
+
+.clearfix:before,
+.clearfix:after
+  display: block
+  clear: both
+  content: ''
+
+.btn
+  color: #F2F2F2
+  border: 3px solid #afb1b4
+  border-radius: 4px
+  font: 300 30px/58px 'HelveticaLTStd', $af
+  padding: 10px 48px
+  transition: $mt
+  &:hover
+    background-color: rgba(175, 177, 180, .2)
+
+/*=== HEADER ===*/
+
+header
+  position: fixed
+  width: 100%
+  background-color: rgba(85, 173, 183, 0.84)
+  #logo
+    font: 40px/25px 'Cherry Swash', $af
+    color: #fff
+    float: left
+    margin-left: 54px
+    padding: 25px 0
+  nav
+    float: right
+    li
+      display: inline-block
+      text-transform: uppercase
+      padding: 30px 0
+      padding-bottom: 15px
+      text-transform: uppercase
+    a
+      color: #fff
+      padding: 0 10px
+      font: 18px/25px 'HelveticaLT', $af
+      opacity: .5
+      transition: $mt
+      &:hover
+        opacity: 1
+    i
+      font-style: normal
+      color: #fff
+      @extend a
+      opacity: 1
+      &:hover
+        opacity: 1
+
+/*=== SLIDER ===*/
+
+#slider
+  background: url(../img/slider-bg0.jpg) no-repeat center, #222
+  width: 100%
+  background-size: cover
+  text-align: center
+  padding:
+    top: 165px
+    bottom: 30px
+  h1
+    display: block
+    width: 530px
+    font: 700 44px/58px 'HelveticaLTStd', $af
+    color: #e4e4e4
+    text-transform: uppercase
+    margin: 35px auto
+  .slider-buttons
+    margin-top: 115px
+    &:hover
+      cursor: default
+    .slider-button
+      display: inline-block
+      border-radius: 50%
+      height: 8px
+      width: 8px
+      background-color: #fff
+      margin: 0 5px
+      &.current
+        opacity: .4
+
+/*=== ABOUT ===*/
+
+#about
+  background-color: #fff
+  text-align: center
+  padding:
+    top: 70px
+  h2
+    width: 630px
+    display: block
+    margin: 0 auto
+    font: 30px/49px 'HelveticaLTStd', $af
+    color: #4c505d
+  p
+    font: 14px/22px 'HelveticaLTStd', $af
+    color: #4c505d
+
+/*=== BLOCKQUOTE ===*/
+
+#blockquote
+  background-color: #00d089
+  padding:
+    bottom: 90px
+  p
+    font: 300 18px/32px 'HelveticaLTStd', $af
+    color: #fff
+
+/*=== CONTACT ===*/
+
+#contact
+  position: relative
+  padding:
+    top: 50px
+    bottom: 34px
+  iframe
+    width: 100%
+    height: 100%
+    position: absolute
+    z-index: 1
+    top: 0
+  form
+    left: 50%
+    margin-left: -(429px / 2)
+    height: 429px
+    width: 429px
+    text-align: center
+    position: relative
+    z-index: 2
+    background-color: rgba(255,255,255, 0.85)
+    border-radius: 50%
+    box-sizing: border-box
+    padding: 100px 77px
+    box-shadow: 0 0 9px rgba(0,0,0,.3)
+    input
+      margin-top: 14px
+      display: block
+      width: 276px
+      border: 1px solid #d8d8d8
+      border-radius: 1px
+      box-sizing: border-box
+      padding: 10px 17px
+    textarea
+      @extend input
+      resize: none
+      height: 80px
+      box-sizing: border-box
+
+/*=== FOOTER ===*/
+
+footer
+  background-color: #00d089
+  color: #fff
+  font: 14px/25px 'HelveticaLT', $af
+  text-transform: uppercase
+  text-align: center
+  padding: 10px 0
